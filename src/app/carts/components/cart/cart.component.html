@@ -1,0 +1,12 @@
+<div>
+  <h3>Your purchase</h3>
+  <div>
+    <ul *ngFor="let purchase of purchaseList">
+      <li>{{purchase.name}}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="purchaseList.length === 0">
+    <p>No item added</p>
+  </div>
+</div>

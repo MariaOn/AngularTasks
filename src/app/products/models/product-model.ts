@@ -1,7 +1,7 @@
 export interface ProductModel {
-  productName: string;
-  productPrice: number;
-  productDescription: string;
+  name: string;
+  price: number;
+  description: string;
 }
 
 

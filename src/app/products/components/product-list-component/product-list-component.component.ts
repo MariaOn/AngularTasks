@@ -21,7 +21,11 @@ export class ProductListComponentComponent implements OnInit {
     this.purchaseList = this.cartService.getPurchaseList();
   }
 
-  onBuy(item) {
+  onBuy(item: ProductModel) {
+    // такой вариант расскрывает внутрености хранения данных в виде массива.
+    // лучше организовать метод в сервисе, вызыват его и передавать данные.
+
+    // эту часть сделаю уже во втором задании.
     this.purchaseList.push(item);
   }
 

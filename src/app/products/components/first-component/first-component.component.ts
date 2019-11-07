@@ -1,11 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-
-
-enum category {
-  Food = 'FOOD',
-  Clothes = 'CLOTHES',
-}
+import { Category } from './category.module';
 
 @Component({
   selector: 'app-first-component',
@@ -13,14 +7,12 @@ enum category {
   styleUrls: ['./first-component.component.css']
 })
 
-
 export class FirstComponentComponent implements OnInit {
   @Input() name: string;
   @Input() description: string;
   @Input() price: number;
-  @Input() category: category;
   @Input() isAvailable: boolean;
-
+  category: Category;
 
   constructor() {
 
@@ -29,7 +21,5 @@ export class FirstComponentComponent implements OnInit {
   ngOnInit() {
 
   }
-
-
 
 }

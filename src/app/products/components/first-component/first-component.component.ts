@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 
-
+// вынести в отдельный модуль
 enum category {
   Food = 'FOOD',
   Clothes = 'CLOTHES',

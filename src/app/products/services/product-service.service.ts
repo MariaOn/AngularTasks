@@ -1,26 +1,32 @@
 import { Injectable } from '@angular/core';
 import { ProductModel } from '../models/product-model';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class ProductServiceService {
-  products: Array<ProductModel> = [{
-  productName: 'potato',
-  productPrice: 1,
-  productDescription: 'tasty'}, {
-  productName: 'potato lux',
-  productPrice: 2,
-  productDescription: 'very tasty'}, {
-  productName: 'carrot',
-  productPrice: 1,
-  productDescription: 'orange'}];
+  // Так читать проще
+  products: Array<ProductModel> = [
+    {
+      productName: 'potato',
+      productPrice: 1,
+      productDescription: 'tasty'
+    },
+    {
+      productName: 'potato lux',
+      productPrice: 2,
+      productDescription: 'very tasty'
+    },
+    {
+      productName: 'carrot',
+      productPrice: 1,
+      productDescription: 'orange'
+    }
+  ];
 
-  constructor() {
-   }
+  constructor() {}
 
   getProducts() {
-     return this.products;
+    return this.products;
   }
 }

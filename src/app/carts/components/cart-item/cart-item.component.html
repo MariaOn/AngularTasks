@@ -1,0 +1,16 @@
+<div class="card-item">
+    <p>name:{{ name }}</p>
+    <div class="price">
+        <p>price:{{ price*quantity }}</p>
+        
+    </div>
+    <div class="quantity">
+        <p>quantity:{{ quantity }}</p>
+        <button class="plus" (click)="onAdd(product)">
+            +
+        </button>
+        <button class="minus" (click)="onSubstract(product)">
+             -
+        </button>
+    </div>
+</div>

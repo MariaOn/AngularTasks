@@ -12,7 +12,7 @@ import { CartService } from '../../../carts/services/cart.service';
 export class ProductListComponentComponent implements OnInit {
 
   products: ProductModel[];
-  purchaseList = [];
+  purchaseList: ProductModel[] = [];
 
   constructor(private productService: ProductServiceService, private cartService: CartService) { }
 
@@ -21,12 +21,8 @@ export class ProductListComponentComponent implements OnInit {
     this.purchaseList = this.cartService.getPurchaseList();
   }
 
-  onBuy(item: ProductModel) {
-    // такой вариант расскрывает внутрености хранения данных в виде массива.
-    // лучше организовать метод в сервисе, вызыват его и передавать данные.
-
-    // эту часть сделаю уже во втором задании.
-    this.purchaseList.push(item);
+  onBuy(product: ProductModel) {
+    return this.cartService.updatePurchaseList(product);
   }
 
 }

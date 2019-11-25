@@ -1,6 +1,22 @@
 <p>Our products:</p>
-<ul>
-  <li *ngFor="let product of products">
-    {{product.productName}}
-  </li>
-</ul>
+
+  <div *ngFor="let product of products">
+    <app-product-component class="prodList"
+    [name]="product.name"
+    [price]="product.price"
+    [description]="product.description"
+    [quantity]="product.quantity"
+    >
+  </app-product-component>
+  <ng-container *ngIf="product.quantity > 0; else buttonDisabled">
+      <button class="buy-button" (click)="onBuy(product)">
+        Buy
+      </button>
+    </ng-container>
+    <ng-template #buttonDisabled>
+      <button class="buy-button" disabled>
+        Buy
+      </button>
+    </ng-template>
+</div>
+

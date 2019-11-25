@@ -1,0 +1,20 @@
+<div>
+    <h3>Your purchase</h3>
+    <div *ngFor="let purchase of purchaseList">
+            <app-cart-item class="prodList"
+    [name]="purchase.name"
+    [price]="purchase.price"
+    quantity
+    >
+  </app-cart-item>
+  <button class="delete-button" (click)="onDelete(purchase)">
+        Delete
+      </button>
+    </div>
+<p>Total price:{{t}}</p>  
+<p>Total quantity:{{t}}</p>
+    <div *ngIf="purchaseList.length === 0">
+      <p>No item added</p>
+    </div>
+  </div>
+  

@@ -10,17 +10,23 @@ export class ProductServiceService {
     {
       name: 'potato',
       price: 1,
-      description: 'tasty'
+      description: 'tasty',
+      quantity: 2,
+      id: '1t'
     },
     {
       name: 'potato lux',
       price: 2,
-      description: 'very tasty'
+      description: 'very tasty',
+      quantity: 3,
+      id: '1c'
     },
     {
       name: 'carrot',
       price: 1,
-      description: 'orange'
+      description: 'orange',
+      quantity: 0,
+      id: '1k'
     }
   ];
 

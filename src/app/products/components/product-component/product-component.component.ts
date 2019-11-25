@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-component',
@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-component.component.css']
 })
 export class ProductComponentComponent {
+  @Input() name: string;
+  @Input() price: number;
+  @Input() description: string;
+  @Input() quantity: number;
 
   constructor() { }
-
-  onBuy(): void {
-    console.log('product is bought');
-  }
 
 }

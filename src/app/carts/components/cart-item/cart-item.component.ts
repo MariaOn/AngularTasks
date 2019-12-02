@@ -9,7 +9,7 @@ export class CartItemComponent {
   @Input() name: string;
   @Input() price: number;
   quantity = 1;
-
+  // Renderer2 класс необходимо использовать
   constructor(private el: ElementRef, private renderer: Renderer) { }
 
   onAdd() {
@@ -25,6 +25,7 @@ export class CartItemComponent {
   }
 
   @HostListener('mouseout') onMouseOut() {
+    // тут можно const part
     let part = this.el.nativeElement.querySelector('.card-item');
     this.renderer.setElementStyle(part, 'backgroundColor', 'white');
   }

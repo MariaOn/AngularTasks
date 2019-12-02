@@ -14,6 +14,7 @@ import { CartListComponent } from './carts/components/cart-list/cart-list.compon
   declarations: [
     AppComponent,
     FirstComponentComponent,
+    // Во втором задании эти компоненты необходимо разложить по отдельным модулям
     ProductComponentComponent,
     ProductListComponentComponent,
     CartComponent,
@@ -28,3 +29,4 @@ import { CartListComponent } from './carts/components/cart-list/cart-list.compon
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// Линтер выдает ошибки 

@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./product-component.component.css']
 })
 export class ProductComponentComponent {
+  // Лучше оформить передачу модели, а не отдельных свойств
   @Input() name: string;
   @Input() price: number;
   @Input() description: string;

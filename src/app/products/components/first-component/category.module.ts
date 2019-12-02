@@ -12,7 +12,7 @@ import { FirstComponentComponent } from './first-component.component';
       CommonModule
     ]
   })
-
+// Не очень понятно, почему так модуль назван?
 export class Category {
     @Input() category: category;
 }
